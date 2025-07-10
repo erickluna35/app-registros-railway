@@ -55,6 +55,7 @@ app.get('/delete/:id', (req, res) => {
 });
 
 // 🚀 Iniciar servidor
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
