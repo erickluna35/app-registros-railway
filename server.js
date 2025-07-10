@@ -1,6 +1,7 @@
 const express = require('express');
 const db = require('./db');
 const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
@@ -53,9 +54,8 @@ app.get('/delete/:id', (req, res) => {
     res.redirect('/');
   });
 });
-// 🚀 Iniciar servidor
-const PORT = process.env.PORT || 3000;
 
+// 🚀 Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
